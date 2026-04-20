@@ -39,5 +39,42 @@ body {
 /* efecto hover */
 #navbar li a:hover {
   background-color: silver;
-  color: black
+  color: black;
+}
+
+/* seccion servicios */
+.seccion-servicios {
+  display: flex;
+  padding: 40px;
+  gap: 30px;
+  background-color: #111;
+  color: white;
+}
+
+/* texto izquierda */
+.texto-servicios {
+  width: 30%;
+}
+
+/* contenedor derecha */
+.contenedor-servicios {
+  width: 70%;
+  display: flex;
+  gap: 20px;
+}
+
+/* tarjetas */
+.servicio {
+  background-color: #f4f4f4;
+  padding: 10px;
+  text-align: center;
+  width: 30%;
+  color: black;
+}
+
+/* imagenes */
+.servicio img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
 }
