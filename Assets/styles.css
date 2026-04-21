@@ -1,18 +1,27 @@
-/*Resetea el diseño*/
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+:root {
+  --rojo-gym: #d32f2f;
+  --negro-fondo: #111111;
+  --gris-suave: #f4f4f4;
+  --blanco: #ffffff;
 }
 
-/*Caja de nav completa*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* NAVBAR */
 #navbar {
-  background-color: #111;
+  background-color: var(--negro-fondo);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-/* Lista de elementos navbar */
 #navbar ul {
   list-style: none;
   margin: 0;
@@ -20,12 +29,10 @@ body {
   overflow: hidden;
 }
 
-/*items a izquierda*/
 #navbar li {
   float: left;
 }
 
-/* links */
 #navbar li a {
   display: block;
   color: white;
@@ -36,45 +43,107 @@ body {
   transition: 0.3s;
 }
 
-/* efecto hover */
 #navbar li a:hover {
   background-color: silver;
   color: black;
 }
 
-/* seccion servicios */
-.seccion-servicios {
-  display: flex;
-  padding: 40px;
-  gap: 30px;
-  background-color: #111;
-  color: white;
+/* ===== BANNER ===== */
+.seccion-inicio {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
 }
 
-/* texto izquierda */
-.texto-servicios {
-  width: 30%;
-}
-
-/* contenedor derecha */
-.contenedor-servicios {
-  width: 70%;
-  display: flex;
-  gap: 20px;
-}
-
-/* tarjetas */
-.servicio {
-  background-color: #f4f4f4;
-  padding: 10px;
-  text-align: center;
-  width: 30%;
-  color: black;
-}
-
-/* imagenes */
-.servicio img {
+.img-banner {
   width: 100%;
-  height: 150px;
+  height: 100%;
   object-fit: cover;
+  filter: brightness(50%);
+}
+
+.contenido-banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--blanco);
+  text-align: center;
+}
+
+.contenido-banner h1 {
+  color: var(--rojo-gym);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.btn-banner {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background-color: var(--rojo-gym);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-banner:hover {
+  background-color: #b71c1c;
+}
+
+/* SERVICIOS */
+.seccion-servicios {
+  padding: 4rem 0;
+  background-color: var(--negro-fondo);
+  color: var(--blanco);
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.titulo-seccion {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--rojo-gym);
+}
+
+.subtitulo-seccion {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #ccc;
+}
+
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.tarjeta-servicio {
+  background-color: var(--gris-suave);
+  color: black;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tarjeta-servicio img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.info-servicio {
+  padding: 20px;
+}
+
+/* FOOTER */
+.footer-final {
+  background-color: var(--negro-fondo);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
 }
