@@ -21,47 +21,176 @@
         </nav>
     </header>
 
-<section id="inicio" class="seccion-inicio">
-    <div class="contenedor">
-        <h1>Fight and Fitness Center</h1>
-        <p>Entrena con disciplina y alcanza tus metas</p>
+    <main>
+        <section id="inicio" class="seccion-inicio">
+        <img src="Assets/Imagenes/Banner.png" class="img-banner">
+
+        <div class="contenido-banner">
+            <h1>Fight and Fitness Center</h1>
+            <p>Entrena con disciplina y alcanza tus metas</p>
+            <a href="#contacto" class="btn-banner">Contáctanos</a>
+        </div>
+    </section>
+
+
+    <section id="nosotros" class="seccion-nosotros">
+    <div class="contenedor text-center">
+        <h2 class="titulo-seccion">Sobre Nosotros</h2>
+        
+        <img src="Assets/Imagenes/Nosotros.jpg" alt="Nosotros" class="imagen-nosotros">
+        
+        <div class="texto-nosotros">
+            <p>
+                Partimos este proyecto con la idea de crear un espacio donde el deporte no sea solo entrenamiento, sino una forma de construir disciplina y mejorar como persona.
+            </p>
+            <p>
+                Acá nos especializamos en Muay Thai, Kickboxing y Brazilian Jiu-Jitsu entre otras artes marciales, además de contar con un centro de preparación física para mejorar rendimiento y condición.
+            <p>
+                Te invitamos a formar parte de nuestra comunidad y alcanzar tus metas con nosotros.
+            </p>
+        </div>
     </div>
 </section>
 
-<section id="servicios" class="seccion-servicios">
+        <section id="servicios" class="seccion-servicios">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Nuestras Artes y Servicios</h2>
+                <p class="subtitulo-seccion">Estas son nuestras disciplinas principales.</p>
+                
+                <div class="grid-servicios">
+                    <article class="tarjeta-servicio">
+                        <img src="Assets/Imagenes/Kickboxing.jpg" alt="Clase de Kickboxing">
+                        <div class="info-servicio">
+                            <h3>Kickboxing</h3>
+                            <p>Mejora tu resistencia, coordinación y fuerza a través de técnicas de golpeo combinadas con entrenamiento físico intenso.</p>
+                        </div>
+                    </article>
 
-    <div class="texto-servicios">
-        <h2>Nuestras Artes</h2>
-        <p>Estas son nuestras disciplinas principales.</p>
-    </div>
+                    <article class="tarjeta-servicio">
+                        <img src="Assets/Imagenes/Brazilian.jpg" alt="Entrenamiento de Brazilian Jiu Jitsu">
+                        <div class="info-servicio">
+                            <h3>Brazilian Jiu Jitsu</h3>
+                            <p>Aprende control, estrategia y defensa personal mediante técnicas de combate en el suelo y sumisiones.</p>
+                        </div>
+                    </article>
 
-    <div class="contenedor-servicios">
+                    <article class="tarjeta-servicio">
+                        <img src="Assets/Imagenes/Preparacion.png" alt="Área de Preparación Física">
+                        <div class="info-servicio">
+                            <h3>Preparación Física</h3>
+                            <p>Desarrolla fuerza, velocidad y resistencia con entrenamientos diseñados para mejorar tu rendimiento físico general.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-        <div class="servicio">
-            <img src="Assets/Imagenes/Kickboxing.jpg">
-            <h3>Kickboxing</h3>
-            <p>Mejora tu resistencia, coordinación y fuerza a través de técnicas de golpeo combinadas con entrenamiento físico intenso.</p>
+        <section id="membresias" class="seccion-membresias">
+            <div class="contenedor">
+                <h2 class="titulo-seccion" style="color: var(--negro-fondo);">Planes de Membresía</h2>
+                <p class="subtitulo-seccion" style="color: #666;">Elige el plan mensual que mejor se adapte a tus objetivos en Copiapó.</p>
+
+                <div class="grid-membresias">
+                    <article class="tarjeta-precio">
+                        <div class="header-precio">
+                            <h3>Plan Básico</h3>
+                            <p class="precio">$25.000 <span>/ mes</span></p>
+                        </div>
+                        <ul class="lista-beneficios">
+                            <li>Acceso a 1 Disciplina (Kickboxing o BJJ)</li>
+                            <li>2 Clases por semana</li>
+                            <li>Uso de casilleros</li>
+                            <li class="no-incluido">Preparación Física personalizada</li>
+                            <li class="no-incluido">Asesoría Nutricional</li>
+                        </ul>
+                        <a href="#contacto" class="btn-membresia">Elegir Plan</a>
+                    </article>
+
+                    <article class="tarjeta-precio destacado">
+                        <div class="badge-destacado">Más Popular</div>
+                        <div class="header-precio">
+                            <h3>Plan Pro</h3>
+                            <p class="precio">$35.000 <span>/ mes</span></p>
+                        </div>
+                        <ul class="lista-beneficios">
+                            <li>Acceso a 2 Disciplinas</li>
+                            <li>3 Clases por semana</li>
+                            <li>Preparación Física general</li>
+                            <li>Uso de casilleros</li>
+                            <li class="no-incluido">Asesoría Nutricional</li>
+                        </ul>
+                        <a href="#contacto" class="btn-membresia btn-destacado">Elegir Plan</a>
+                    </article>
+
+                    <article class="tarjeta-precio">
+                        <div class="header-precio">
+                            <h3>Plan Full</h3>
+                            <p class="precio">$45.000 <span>/ mes</span></p>
+                        </div>
+                        <ul class="lista-beneficios">
+                            <li>Acceso Total (BJJ, Kickboxing, Prep)</li>
+                            <li>Clases ilimitadas</li>
+                            <li>Preparación Física avanzada</li>
+                            <li>Asesoría Nutricional mensual</li>
+                            <li>Uso de casilleros</li>
+                        </ul>
+                        <a href="#contacto" class="btn-membresia">Elegir Plan</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion-contacto">
+            <div class="contenedor grid-dos-columnas">
+                
+                <div class="caja-formulario">
+                    <h3>Envíanos un mensaje</h3>
+                    <form action="#">
+                        <div class="campo">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" required>
+                        </div>
+                        <div class="campo">
+                            <label for="correo">Correo</label>
+                            <input type="email" id="correo" required>
+                        </div>
+                        <div class="campo">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-rojo">Enviar Consulta</button>
+                    </form>
+                </div>
+
+                <div class="caja-mapa">
+                    <h3>Ubícanos en Copiapó</h3>
+                    <div class="contenedor-mapa">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113619.10287019677!2d-70.43579045550262!3d-27.366838383827555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96980302195f082d%3A0xc34b6932402127db!2sCopiap%C3%B3%2C%20Atacama!5e0!3m2!1ses!2scl!4v1714000000000!5m2!1ses!2scl" 
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" title="Mapa de ubicación de Fight and Fitness Center">
+                        </iframe>
+                        <p class="direccion-texto">Suri - Pje. Suri 1515, Copiapó, Atacama</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-final">
+        <div class="contenedor grid-footer">
+            <div class="footer-info">
+                <h4>Fight & Fitness Center</h4>
+                <p>Teléfono: +56 9 9851 3619</p>
+            </div>
+            <div class="footer-redes">
+                <h4>Síguenos</h4>
+                <a href="#" target="_blank">Instagram: @ffsports.center</a>
+                <a href="#" target="_blank">Facebook: Fight & Fitness Center</a>
+            </div>
         </div>
-
-        <div class="servicio">
-            <img src="Assets/Imagenes/Brazilian.jpg">
-            <h3>Brazilian Jiu Jitsu</h3>
-            <p>Aprende control, estrategia y defensa personal mediante técnicas de combate en el suelo y sumisiones.</p>
-        </div>
-
-        <div class="servicio">
-            <img src="Assets/Imagenes/Preparacion.png">
-            <h3>Preparación Física</h3>
-            <p>Desarrolla fuerza, velocidad y resistencia con entrenamientos diseñados para mejorar tu rendimiento físico general.</p>
-        </div>
-
-    </div>
-
-</section>
-
-    <footer class="pie-pagina">
-        <div class="contenedor">
-            <p>&copy; 2026 Fight and Fitness Center. Todos los derechos reservados.</p>
+        <div class="copyright">
+            <p>© 2026 Fight and Fitness Center. Todos los derechos reservados.</p>
         </div>
     </footer>
 
