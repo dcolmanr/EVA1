@@ -1,18 +1,40 @@
-/*Resetea el diseño*/
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+:root {
+  --rojo-gym: #d32f2f;
+  --negro-fondo: #111111;
+  --gris-suave: #f4f4f4;
+  --blanco: #ffffff;
 }
 
-/*Caja de nav completa*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif; 
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.contenedor { 
+  width: 90%; 
+  max-width: 1100px; 
+  margin: 0 auto; 
+}
+
+.text-center {
+  text-align: center;
+}
+
 #navbar {
-  background-color: #111;
+  background-color: var(--negro-fondo);
   position: sticky;
   top: 0;
   z-index: 1000;
+  display: flex;
+  justify-content: center; 
 }
 
-/* Lista de elementos navbar */
 #navbar ul {
   list-style: none;
   margin: 0;
@@ -20,12 +42,10 @@ body {
   overflow: hidden;
 }
 
-/*items a izquierda*/
 #navbar li {
   float: left;
 }
 
-/* links */
 #navbar li a {
   display: block;
   color: white;
@@ -36,45 +56,331 @@ body {
   transition: 0.3s;
 }
 
-/* efecto hover */
 #navbar li a:hover {
   background-color: silver;
   color: black;
 }
 
-/* seccion servicios */
+.seccion-inicio {
+  background-color: var(--negro-fondo);
+  color: var(--blanco);
+  padding: 80px 0;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+}
+
+.seccion-inicio h1 {
+  font-size: 2.5rem;
+  color: var(--rojo-gym);
+  margin-bottom: 10px;
+}
+
 .seccion-servicios {
-  display: flex;
-  padding: 40px;
-  gap: 30px;
-  background-color: #111;
-  color: white;
+  padding: 4rem 0;
+  background-color: var(--negro-fondo);
+  color: var(--blanco);
 }
 
-/* texto izquierda */
-.texto-servicios {
-  width: 30%;
-}
-
-/* contenedor derecha */
-.contenedor-servicios {
-  width: 70%;
-  display: flex;
-  gap: 20px;
-}
-
-/* tarjetas */
-.servicio {
-  background-color: #f4f4f4;
-  padding: 10px;
+.titulo-seccion {
   text-align: center;
-  width: 30%;
-  color: black;
+  font-size: 2rem;
+  color: var(--rojo-gym);
+  margin-bottom: 10px;
 }
 
-/* imagenes */
-.servicio img {
+.subtitulo-seccion {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #cccccc;
+}
+
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.tarjeta-servicio {
+  background-color: var(--gris-suave);
+  color: #333;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-servicio:hover {
+  transform: translateY(-5px);
+}
+
+.tarjeta-servicio img {
   width: 100%;
-  height: 150px;
+  height: 200px;
   object-fit: cover;
+  display: block;
+}
+
+.info-servicio {
+  padding: 20px;
+}
+
+.info-servicio h3 {
+  margin-top: 0;
+  color: var(--negro-fondo);
+}
+
+.seccion-membresias {
+    padding: 4rem 0;
+    background-color: var(--blanco);
+}
+
+.grid-membresias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: start;
+}
+
+.tarjeta-precio {
+    background-color: var(--gris-suave);
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.tarjeta-precio:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.tarjeta-precio.destacado {
+    border: 2px solid var(--rojo-gym);
+    background-color: #fff;
+    transform: scale(1.05);
+}
+
+.badge-destacado {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--rojo-gym);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.header-precio h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.precio {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--negro-fondo);
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.precio span {
+    font-size: 1rem;
+    color: #777;
+    font-weight: normal;
+}
+
+.lista-beneficios {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    text-align: left;
+}
+
+.lista-beneficios li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    color: #444;
+}
+
+.lista-beneficios li::before {
+    content: "✓ ";
+    color: var(--rojo-gym);
+    font-weight: bold;
+}
+
+.lista-beneficios li.no-incluido {
+    color: #bbb;
+    text-decoration: line-through;
+}
+
+.lista-beneficios li.no-incluido::before {
+    content: "✕ ";
+    color: #ccc;
+}
+
+.btn-membresia {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--negro-fondo);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.btn-membresia:hover {
+    background-color: #333;
+}
+
+.btn-destacado {
+    background-color: var(--rojo-gym);
+}
+
+.btn-destacado:hover {
+    background-color: #b71c1c;
+}
+
+.seccion-contacto { 
+  padding: 4rem 0; 
+  background-color: var(--gris-suave); 
+}
+
+.grid-dos-columnas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.caja-formulario {
+  background-color: var(--blanco);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.caja-formulario h3, .caja-mapa h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--rojo-gym);
+}
+
+.campo { 
+  margin-bottom: 15px; 
+}
+
+.campo label { 
+  display: block; 
+  margin-bottom: 5px; 
+  font-weight: bold; 
+}
+
+.campo input, .campo textarea { 
+  width: 100%; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px; 
+}
+
+.btn-rojo {
+  background-color: var(--rojo-gym);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn-rojo:hover {
+  background-color: #b71c1c;
+}
+
+.caja-mapa {
+  padding: 0;
+}
+
+.contenedor-mapa iframe {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.direccion-texto {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+}
+
+.footer-final { 
+  background-color: var(--negro-fondo); 
+  color: white; 
+  padding: 3rem 0 1rem; 
+}
+
+.grid-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.footer-info h4, .footer-redes h4 {
+  color: var(--rojo-gym);
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.footer-redes a { 
+  display: block; 
+  color: var(--blanco); 
+  text-decoration: none; 
+  margin-top: 10px; 
+  transition: color 0.3s;
+}
+
+.footer-redes a:hover { 
+  color: var(--rojo-gym); 
+}
+
+.copyright { 
+  border-top: 1px solid #444; 
+  padding-top: 1rem; 
+  text-align: center; 
+  font-size: 0.9rem; 
+  color: #aaa;
+}
+
+@media (max-width: 768px) { 
+  .tarjeta-precio.destacado {
+      transform: scale(1);
+      margin: 20px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-dos-columnas { 
+      grid-template-columns: 1fr 1fr; 
+  }
+  
+  .grid-footer { 
+      grid-template-columns: 1fr 1fr; 
+      text-align: left; 
+  }
+
+  .direccion-texto {
+      text-align: left;
+  }
 }
